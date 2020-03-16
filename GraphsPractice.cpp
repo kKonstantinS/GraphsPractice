@@ -17,8 +17,6 @@ struct node {
         this->nodes.insert(std::begin(nodes), std::end(nodes));
     }
 
-    node() {}
-
     friend std::ostream& operator<< (std::ostream& os, const node& n) {
         os << n.id << ": ";
         for (int el : n.nodes) {
@@ -81,15 +79,6 @@ int main()
         nodes.push_back(*node1);
         arr.clear();
     }
-
-    /*for (node n : nodes) {
-        std::cout << n << std::endl;
-    }
-    std::vector<int> *passedArr = new std::vector<int>();*/
-
-
-    //std::copy(std::begin(*passedArr), std::end(*passedArr), std::begin(getNodes(*nodes.begin())));
-
 
 
     std::vector<node>::iterator it = std::find_if(nodes.begin(), nodes.end(), [](const node& val) {
