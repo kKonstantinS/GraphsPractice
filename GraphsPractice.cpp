@@ -104,7 +104,7 @@ int main()
             }
             unordered_set<int>::iterator it1 = inQueue.find(i);
             inQueue.erase(it1);
-            int a = 12;
+            //int a = 12;
     }
 
     for (int i : *passed)
